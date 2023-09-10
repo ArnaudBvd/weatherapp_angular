@@ -14,11 +14,13 @@ export class WeatherComponent implements OnInit{
   pressure: number = 0;
   summary: string = '';
   iconUrl: string = '';
+  city: string = 'Lyon';
+  units: string = 'metric';
 
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeather().subscribe({
+    this.weatherService.getWeather(this.city, this.units).subscribe({
 
       next: (res) => {
         console.log(res);

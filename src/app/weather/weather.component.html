@@ -1,17 +1,17 @@
 <div class="mycontainer">
-    <div class="card text-bg-primary m-5" style="max-width: 18rem;">
-        <div class="card-header text-center">
-            <h2>Lyon</h2>
+    <div class="card text-bg-primary m-5 shadow-lg">
+        <div class="card-header text-center m-3">
+            <h2>{{city}}</h2>
             <div class="m-4">
                 <p><img src="{{iconUrl}}" alt="logo de météo"></p>
             </div>
         </div>
-        <div class="card-body">
-            <p class="card-text">Résumé : {{summary | titlecase}}</p>
-            <p class="card-text">Température : {{temperature}} °c</p>
-            <p class="card-text">Température ressentie : {{feelsLikeTemp}} °c</p>
-            <p class="card-text">Pression : {{pressure}} hPa</p>
-            <p class="card-text">Humidité : {{humidity}} %</p>
+        <div class="card-body m-4">
+            <p class="card-text">Résumé : <span>{{summary | titlecase}}</span></p>
+            <p class="card-text">Température : <span>{{temperature}} °c</span></p>
+            <p class="card-text">Température ressentie : <span>{{feelsLikeTemp}} °c</span></p>
+            <p class="card-text">Pression : <span>{{pressure}} hPa</span></p>
+            <p class="card-text">Humidité : <span>{{humidity}} %</span></p>
         </div>
     </div>
 </div>
