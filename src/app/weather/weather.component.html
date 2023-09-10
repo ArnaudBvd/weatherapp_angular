@@ -1,1 +1,17 @@
-<p>weather works!</p>
+<div class="mycontainer">
+    <div class="card text-bg-primary m-5" style="max-width: 18rem;">
+        <div class="card-header text-center">
+            <h2>Lyon</h2>
+            <div class="m-4">
+                <p><img src="{{iconUrl}}" alt="logo de météo"></p>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Résumé : {{summary | titlecase}}</p>
+            <p class="card-text">Température : {{temperature}} °c</p>
+            <p class="card-text">Température ressentie : {{feelsLikeTemp}} °c</p>
+            <p class="card-text">Pression : {{pressure}} hPa</p>
+            <p class="card-text">Humidité : {{humidity}} %</p>
+        </div>
+    </div>
+</div>
