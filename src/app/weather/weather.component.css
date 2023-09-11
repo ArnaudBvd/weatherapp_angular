@@ -1,13 +1,38 @@
+body {
+    background-image: url('../../assets/clouds.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navBar {
+    background-color: #242f5e;
+}
+
+.slider {
+    background-image: url('../../assets/clouds.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;    
+}
+
+.infoCard {
+    background-color: #242f5e;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
 .mycontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h2 {
+h2,
+span {
     font-weight: bold;
 }
 
 span {
-    font-weight: bold;
+    color: #fff;
 }
