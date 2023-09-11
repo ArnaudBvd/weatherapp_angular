@@ -8,13 +8,6 @@ body {
     background-color: #242f5e;
 }
 
-.slider {
-    background-image: url('../../assets/clouds.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 250px;    
-}
-
 .infoCard {
     background-color: #242f5e;
     border-radius: 8px;
