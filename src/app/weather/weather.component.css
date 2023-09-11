@@ -29,3 +29,33 @@ span {
 span {
     color: #fff;
 }
+
+label {
+    color: #242f5e;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    border-radius: 8px;
+}
+
+button {
+    padding: 5px 15px;
+    border: 1px solid #242f5e;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    color: #242f5e;
+    font-weight: bolder;
+    transition: all 1.5s ease;
+}
+
+button:hover {
+    padding: 5px 15px;
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
+    background-color: #242f5e;
+    color: #ffcc00;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
