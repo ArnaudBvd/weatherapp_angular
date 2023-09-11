@@ -14,7 +14,7 @@ export class WeatherComponent implements OnInit{
   pressure: number = 0;
   summary: string = '';
   iconUrl: string = '';
-  city: string = 'Lyon';
+  city: string = 'lyon';
   units: string = 'metric';
 
   constructor(private weatherService: WeatherService) {}
@@ -39,6 +39,12 @@ export class WeatherComponent implements OnInit{
 
       complete: () => console.info('API call completed')
     })
+    
+  }
+  
+  updateCity(cityInput: HTMLInputElement) {
+    this.city = cityInput.value;
+    
   }
 
 }

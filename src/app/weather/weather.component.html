@@ -24,12 +24,12 @@
 <div class="mycontainer">
     <div class="card m-5 infoCard border-4">
         <div class="card-header text-center m-3">
-            <h2 class="text-light">{{city}}</h2>
-            <div class="m-2">
+            <h2 class="text-light">{{city | uppercase}}</h2>
+            <div>
                 <p><img src="{{iconUrl}}" alt="logo de météo" width="150" height="150"></p>
             </div>
         </div>
-        <div class="card-body m-4">
+        <div class="card-body">
             <p class="card-text text-warning fw-bold">Résumé : <span>{{summary | titlecase}}</span></p>
             <p class="card-text text-warning fw-bold">Température : <span>{{temperature}} °c</span></p>
             <p class="card-text text-warning fw-bold">Température ressentie : <span>{{feelsLikeTemp}} °c</span></p>
@@ -39,14 +39,12 @@
     </div>
 </div>
 
-<div class="container d-flex justify-content-center mt-3 mb-5">
-    <form action="">
-        <div>
-            <label for="searchCity" class="mb-2">Veuillez renseigner une ville : </label><br>
-            <input type="text" name="searchCity" id="searchCity">
-        </div>
-        <div class="d-flex justify-content-center mt-3">
-            <button>VALIDER</button>
-        </div>
-    </form>
+<div class="container d-flex justify-content-center flex-column align-items-center mt-3 mb-5">
+    <div>
+        <label for="searchCity" class="mb-2">Veuillez renseigner une ville : </label><br>
+        <input type="text" name="searchCity" id="searchCity" #cityInput>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <button (click)="updateCity(cityInput)">VALIDER</button>
+    </div>
 </div>
