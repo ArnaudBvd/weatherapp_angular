@@ -43,8 +43,6 @@ export class WeatherComponent implements OnInit{
   }
   
   updateCity(cityInput: HTMLInputElement) {
-    this.city = cityInput.value;
-    
+    this.city = cityInput.value;    
   }
-
 }

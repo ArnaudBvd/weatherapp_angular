@@ -59,3 +59,15 @@ button:hover {
     font-weight: bolder;
     transition: all 0.5s ease;
 }
+
+.inputSearch {
+    border: 2px solid #242f5e;
+    width: 25%;
+    padding: 20px 0;
+    border-radius: 8px;
+    background-color: #242f5e;
+}
+
+.inputSearch, label {
+    color: #fff;
+}
