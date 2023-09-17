@@ -6,43 +6,43 @@ import { WeatherService } from '../weather.service';
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
-export class WeatherComponent implements OnInit{
+export class WeatherComponent implements OnInit {
   myWeather: any;
-  temperature: number = 0;
-  feelsLikeTemp: number = 0;
-  humidity: number = 0;
-  pressure: number = 0;
-  summary: string = '';
-  iconUrl: string = '';
-  city: string = 'lyon';
-  units: string = 'metric';
+  temperature = 0;
+  feelsLikeTemp = 0;
+  humidity = 0;
+  pressure = 0;
+  summary = '';
+  iconUrl = '';
+  city = 'lyon';
+  units = 'metric';
 
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeather(this.city, this.units).subscribe({
+    this.getWeatherData(); // Appel de la méthode pour obtenir les données météorologiques initiales
+  }
 
+  // Méthode pour obtenir les données météorologiques
+  private getWeatherData() {
+    this.weatherService.getWeather(this.city, this.units).subscribe({
       next: (res) => {
-        console.log(res);
         this.myWeather = res;
-        console.log(this.myWeather);
         this.temperature = this.myWeather.main.temp;
         this.feelsLikeTemp = this.myWeather.main.feels_like;
         this.humidity = this.myWeather.main.humidity;
         this.pressure = this.myWeather.main.pressure;
         this.summary = this.myWeather.weather[0].description;
-
-        this.iconUrl = 'http://openweathermap.org/img/wn/' + this.myWeather.weather[0].icon + '@2x.png';
+        this.iconUrl = `http://openweathermap.org/img/wn/${this.myWeather.weather[0].icon}@2x.png`;
       },
-
       error: (error) => console.log(error.message),
-
       complete: () => console.info('API call completed')
-    })
-    
+    });
   }
-  
+
+  // Méthode pour mettre à jour la ville
   updateCity(cityInput: HTMLInputElement) {
-    this.city = cityInput.value;    
+    this.city = cityInput.value;
+    this.getWeatherData(); // Réappeler la méthode pour mettre à jour les données météorologiques
   }
 }
